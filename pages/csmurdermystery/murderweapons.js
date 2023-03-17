@@ -1,12 +1,12 @@
 import { Inter } from 'next/font/google'
-import styles from '@/styles/Styles.module.css'
 import Link from 'next/link'
+import styles from '@/styles/Styles.module.css'
 import { Header } from '@/components/header.js'
 import { Description } from '@/components/description.js'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function MurderWeapons() {
   return (
     <>
       <Header/>
@@ -14,20 +14,25 @@ export default function Home() {
         <Description/>
 
         <div>
-          <h1>Murder Mysteries</h1>
+          <h1>Mogelijke moordwapens</h1>
         </div>
 
         <div className={styles.grid}>
           <Link
-            href="/csmurdermystery"
+            href="csmurdermystery/weapon1"
             className={styles.card}
           >
             <h2 className={inter.className}>
-              Computer Science Murder Mystery <span>-&gt;</span>
+              Wapen 1 <span>-&gt;</span>
             </h2>
-            <p className={inter.className}>
-              Solve this Computer Science-themed murder mystery!
-            </p>
+          </Link>
+          <Link
+            href="csmurdermystery/weapon2"
+            className={styles.card}
+          >
+            <h2 className={inter.className}>
+              Wapen 2 <span>-&gt;</span>
+            </h2>
           </Link>
         </div>
       </main>
